@@ -9,24 +9,24 @@
 
 # Example:
 
-|var options = {
-    verticalStyles: {
-        ipad: ['ipad.css'],
-    iphone: ['iphone.css'],
-	    ipod: ['ipod.css']
-    },
-    horizontalStyles: {
-	    ipad: ['hor_ipad.css'],
-	    iphone: ['hor_iphone.css'],
-	    ipod: ['hor_ipod.css']
-    },
-    standardStyles: ['common.css'],
-    cssPath: '../_css/',
-    allowedDevices: ['ipad', 'ipod', 'iphone'],
-    linksClassName: 'iDetector'
-}
+    var options = {
+        verticalStyles: {
+            ipad: ['ipad.css'],
+        iphone: ['iphone.css'],
+	        ipod: ['ipod.css']
+        },
+        horizontalStyles: {
+	        ipad: ['hor_ipad.css'],
+	        iphone: ['hor_iphone.css'],
+	        ipod: ['hor_ipod.css']
+        },
+        standardStyles: ['common.css'],
+        cssPath: '../_css/',
+        allowedDevices: ['ipad', 'ipod', 'iphone'],
+        linksClassName: 'iDetector'
+    }
 
-var detector = new iDetector(options);|
+    var detector = new iDetector(options);
 
 # Methods:
 
