@@ -77,7 +77,7 @@ iDetector.prototype = {
 
 	allowedDevices: function() {
 		if (!this.options.allowedDevices)
-			return ['ipad', 'iphone','ipod'];
+			return ['ipad', 'ipod','iphone'];
 		else
 			return this.options.allowedDevices;
 	},
