@@ -1,4 +1,4 @@
-h1. Allowed Options:
+# Allowed Options:
 
 * verticalStyles: an Object that contain each allowed device name and an Array with all css required for this device on vertical position.
 * horizontalStyles: an Object that contain each allowed device name and an Array with all css required for this device on vertical position.
@@ -7,9 +7,9 @@ h1. Allowed Options:
 * allowedDevices: an Array with allowed devices.
 * linksClassName: a class name for all css added dinamically.
 
-h1. Example:
+# Example:
 
-var options = {
+|var options = {
     verticalStyles: {
         ipad: ['ipad.css'],
     iphone: ['iphone.css'],
@@ -26,9 +26,9 @@ var options = {
     linksClassName: 'iDetector'
 }
 
-var detector = new iDetector(options);
+var detector = new iDetector(options);|
 
-h1. Methods:
+# Methods:
 
 * getAgent(); //return a string that contain your user agent
 * getDeviceName(); //name of your device
