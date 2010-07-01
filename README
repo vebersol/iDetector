@@ -1,15 +1,15 @@
-Allowed Options:
+h1. Allowed Options:
 
- verticalStyles: an Object that contain each allowed device name and an Array with all css required for this device on vertical position.
- horizontalStyles: an Object that contain each allowed device name and an Array with all css required for this device on vertical position.
- standardStyles: an Array with all css required for not allowed devices, like common browsers.
- cssPath: an string with correct path to css.
- allowedDevices: an Array with allowed devices.
- linksClassName: a class name for all css added dinamically.
+* verticalStyles: an Object that contain each allowed device name and an Array with all css required for this device on vertical position.
+* horizontalStyles: an Object that contain each allowed device name and an Array with all css required for this device on vertical position.
+* standardStyles: an Array with all css required for not allowed devices, like common browsers.
+* cssPath: an string with correct path to css.
+* allowedDevices: an Array with allowed devices.
+* linksClassName: a class name for all css added dinamically.
 
- Example:
+h1. Example:
 
- var options = {
+var options = {
     verticalStyles: {
         ipad: ['ipad.css'],
     iphone: ['iphone.css'],
@@ -28,11 +28,13 @@ Allowed Options:
 
 var detector = new iDetector(options);
 
-detector.getAgent(); //return a string that contain your user agent
-detector.getDeviceName(); //name of your device
-detector.getOrientation(); //get orientation of your deviceName
-detector.detectAgent(); //detect if this device is an allowed device
-detector.defineStyles(); //apply all defined styles in your options
-detector.addRotationEvent(); //apply rotation event for applications that need 1 css for each position (vertical, horizontal)
-detector.removeLinkTags(); // remove all css added dinamically
+h1. Methods:
+
+* getAgent(); //return a string that contain your user agent
+* getDeviceName(); //name of your device
+* getOrientation(); //get orientation of your deviceName
+* detectAgent(); //detect if this device is an allowed device
+* defineStyles(); //apply all defined styles in your options
+* addRotationEvent(); //apply rotation event for applications that need 1 css for each position (vertical, horizontal)
+* removeLinkTags(); // remove all css added dinamically
 
