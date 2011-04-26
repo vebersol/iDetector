@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>Page Titles</title>
+        <script src="iDetector.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+        <script type="text/javascript" language="javascript" charset="utf-8">
+    options = {
+	    verticalStyles: {
+	        ipad: ['ipad.css'],
+		    iphone: ['iphone.css'],
+		    ipod: ['ipod.css']
+	    },
+	    horizontalStyles: {
+		    ipad: ['hor_ipad.css'],
+		    iphone: ['hor_iphone.css'],
+		    ipod: ['hor_ipod.css']
+	    },
+	    standardStyles: ['common.css'],
+	    cssPath: '../_css/',
+	    allowedDevices: ['ipad', 'ipod', 'iphone', 'firefox'],
+        linksClassName: 'iDetector'
+    }
+
+        window.onload = function() {
+            var d = new iDetector(options);
+            var sizes = d.getSizes();
+
+            div = document.getElementById('myDiv');
+            div.style.width = sizes.width + 'px';
+            div.style.height = sizes.height + 'px';
+        }
+        </script>
+        <style type="text/css" media="screen">
+        /* <![CDATA[ */
+            body {margin:0;}
+        /* ]]> */
+        </style>
+
+    </head>
+    <body>
+	    <div id="myDiv" style="background-color:red;">a<!-- --></div>
+    </body>
+</html>
+

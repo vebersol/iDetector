@@ -139,6 +139,53 @@ iDetector.prototype = {
 		return false;
 	},
 
+	getOrientationType: function() {
+	    var orientation = this.getOrientation();
+	    var type = '';
+        switch (orientation) {
+            case 0:
+            type = 'portrait';
+            break;
+            case 90:
+            type = 'landscape';
+            break;
+            case 180:
+            type = 'portrait';
+            break;
+            case -90:
+            type = 'landscape';
+            break;
+        }
+
+        return type;
+	},
+
+	getSizes: function() {
+        var device = this.getDeviceName();
+        var devicesSizes = this.defaultSizes();
+        var orientationType = this.getOrientationType();
+
+        if (devicesSizes[device]['browser'][orientationType])
+            return devicesSizes[device]['browser'][orientationType];
+        else
+            return false;
+	},
+
+	defaultSizes: function() {
+        var sizes = {'ipad':
+                        {'browser':
+                            {'portrait': {'width': 768, 'height': 946},
+                            'landscape': {'width': 1024, 'height': 690}}
+                        },
+                    'iphone':
+                        {'browser':
+                            {'portrait': {'width': 320, 'height': 356},
+                            'landscape': {'width': 480, 'height': 208}}
+                        },
+                    };
+        return sizes;
+	},
+
 	removeLinkTags: function() {
 		var tags = document.getElementsByTagName('link');
 		for (var i = 0; i < tags.length; i++) {
